@@ -112,5 +112,19 @@ submit your gentx file to [Omniflix/testnets](https://github.com/Omniflix/testne
 
 ---
 
-  
-  
+
+
+**Execute below instructions only after publish of final genesis**
+
+genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.com/Omniflix/testnets)  
+
+ #### Download Genesis 
+ ```
+ TBU
+ ```
+
+#### Start Validator
+ ```
+TBU
+```
+
