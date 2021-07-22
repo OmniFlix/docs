@@ -228,7 +228,7 @@ A helpful command here is `journalctl` that can be used to:
 
   a) check logs
   ```
-  journalctl -u omniflixhubd
+  journalctl -u -f omniflixhubd
   ```
 
   b) most recent logs
@@ -239,4 +239,9 @@ A helpful command here is `journalctl` that can be used to:
   c) logs from previous day
   ```
   journalctl --since "1 day ago" -u omniflixhubd
+  ```
+
+  d) Check logs with follow flag
+  ```
+  journalctl -f -u omniflixhubd
   ```
