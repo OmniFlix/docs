@@ -208,19 +208,19 @@ WantedBy=multi-user.target
 EOF
 ```
 
-- Load service and start
+3.2.2) Load service and start
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable omniflixhubd
 sudo systemctl start omniflixhubd
 ```
 
-- Check status of service
+3.2.3) Check status of service
 ```
 sudo systemctl status omniflixhubd
 ```
 
-You can use `journalctl` to:
+3.2.4) You can use `journalctl` to:
 
 - check logs
 `journalctl -u omniflixhubd` 
