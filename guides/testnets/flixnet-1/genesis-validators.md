@@ -28,7 +28,7 @@ sudo rm -rf /usr/local/go
 1.2) Install latest/required Go version (installing `go1.16.5`)
 
 ```
-curl https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf
+curl https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz | sudo tar -C /usr/local -zxvf -
 ```
 
 1.3) Update env variables to include `go`
