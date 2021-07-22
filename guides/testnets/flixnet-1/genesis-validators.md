@@ -1,33 +1,39 @@
-# Setting Up a Genesis Validator for OmniFlix Testnet (flixnet-1)
+# Setting up a Genesis Validator for OmniFlix Testnet (flixnet-1)
 
-### Hardware Requirements
-
-- OS : Ubuntu 20.04
-  ### minimal
-  
-  - CPU: 1 core
-  - RAM: 2GB
-  - Storage: 25GB SSD
-  ### Recommended
-  - CPU: 2 core
-  - RAM: 4GB
-  - Storage: 50GB SSD
-  
-
-Setup 
+Hardware
 ---
-### Install Go
+#### Supported
+- **Operating System (OS):** Ubuntu 20.04 (minimal)
+- **CPU:** 1 core
+- **RAM:** 2GB
+- **Storage:** 25GB SSD
+
+#### Recommended
+
+- **Operating System (OS):** Ubuntu 20.04 (minimal)
+- **CPU:** 2 core
+- **RAM:** 4GB
+- **Storage:** 50GB SSD
+
+# A) Setup
+
+## 1) Install Golang (go)
+
+1.1) Remove any existing installation of `go`
+
 ```
-# Remove existing old Go installation
-
 sudo rm -rf /usr/local/go
+```
 
-# Install latest/required Go version (installing go1.16.5)
+1.2) Install latest/required Go version (installing `go1.16.5`)
 
+```
 curl https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+```
 
-# Update env variables to include go
+1.3) Update env variables to include `go`
 
+```
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
@@ -37,50 +43,67 @@ EOF
 
 source $HOME/.profile
 ```
-check installed go version
-`go version`
-### Install required software packages
+
+1.4) Check the version of go installed
+
+```
+go version
+```
+
+### 2) Install required software packages
+
 ```
 sudo apt-get install git curl build-essential make jq -y
 ```
 
-### Install omniflixhub
+### 3) Install `omniflixhub`
+
 ```
 git clone https://github.com/Omniflix/omniflixhub.git
 cd omniflixhub
 git checkout v0.1.0
 make install
 ```
-verify your installation
+
+### 4) Verify your installation
 ```
 omniflixhubd version --long
 ```
-should see similar response like this.. make sure version and commit hash are correct
-  ```
- name: OmniFlixHub
+
+On running the above command, you should see a similar response like this. Make sure that the *version* and *commit hash* are accurate
+
+```
+name: OmniFlixHub
 server_name: omniflixhubd
 version: 0.1.0
 commit: 95e2aebaf02406bdcc78f9268380528bd1a25617
 ```
-### Initialize Node
+
+### 5) Initialize Node
+
 ```
 omniflixhubd init <your-node-moniker> --chain-id flixnet-1 
 ```
-Above command will initialize node with default configuration (config files will be saved at  ~/.omniflixhub/config)
+On running the above command, node will be initialized with default configuration. (config files will be saved in node's default home directory (~/.omniflixhub/config)
 
-Backup your node and validator keys. you may need these keys in later phases
+NOTE: Backup node and validator keys . You will need to use these keys at a later point in time.
 
-### Create Account keys 
+### 6) Create Account keys 
+
 ```
 omniflixhubd keys add <key-name>
 ```
-save mnemonic and account details . we need mnemonic/private key to recover accounts 
 
-### Add Genesis Account
+NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
+
+### 7) Add Genesis Account
+
 ```
 omniflixhubd add-genesis-account <key-name> 50000000uflix
 ```
-### Create Your GenTx
+
+### 8) Create Your `gentx`
+
 ```
 omniflixhubd gentx <key-name> 50000000uflix \
   --pubkey=$(omniflixhubd tendermint show-validator) \
@@ -93,38 +116,117 @@ omniflixhubd gentx <key-name> 50000000uflix \
   --commission-max-change-rate="0.01" \
   --min-self-delegation="1" \
   --identity="<your-keybase-identity>" 
-```
-`<key-name>` and `chain-id` are required. other flags are optional
+```    
 
-Note: Don't change amount value in above command 
+Note:
 
-genesis tx will be saved in `~/.omniflixhub/config/gentx` folder
+- `<key-name>` and `chain-id` are required. other flags are optional
+- Don't change amount value while creating your gentx 
+- Genesis transaction file will be saved in `~/.omniflixhub/config/gentx` folder
 
-### Submit Your GenTx
-submit your gentx file to [Omniflix/testnets](https://github.com/Omniflix/testnets) repository in the format `<validator-moniker>-gentx.json` (don\'t use spaces in file names) 
+### 9) Submit Your GenTx
 
+Submit your gentx file to this [OmniFlix/testnets](https://github.com/OmniFlix/testnets) repository in the format of 
+`<validator-moniker>-gentx.json`
 
- To submit gentx
+NOTE: (Do NOT use space in the file name) 
+
+To submit gentx, follow the below process:
  
-   - Fork [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
-   - Upload your gentx file in `flixnet-1/gentxs` folder with file name format as {moniker}-gentx.json
-   - Submit Pull request to [Omniflix/testnets](https://github.com/Omniflix/testnets) with name `ADD <your-moniker> GenTx`
+   - Fork the [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
+   - Upload your gentx file in `flixnet-1/gentxs` folder
+   - Submit Pull Request to [OmniFlix/testnets](https://github.com/OmniFlix/testnets) with name `ADD <your-moniker> gentx`
 
 ---
 
+**Execute below instructions only after publishing of final genesis file**
+
+genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.com/Omniflix/testnets)
 
 
-**Execute below instructions only after publish of final genesis**
 
-genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.com/Omniflix/testnets)  
 
- #### Download Genesis 
- ```
- TBU
- ```
+# B) Starting the validator
 
-#### Start Validator
- ```
+### 1) Download Final Genesis
+download genis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
+
 TBU
+
+### 2) Peers & Seeds
+
+TBU
+
+### 3) Start the Node
+
+### 3.1) Start node with screen session
+3.1.1) Update no of open files limit
+  ```
+   ulimit -Sn 65535
+   ulimit -Hn 65535
+
+   # verify the values above are updated correctly
+   ulimit -n
+  ```
+
+3.1.2) Install screen if not installed
+  ```
+   sudo apt-get install screen -y
+  ```
+3.1.3) Start new screen with a name
+   ```
+   screen -Rd omniflix
+   ```
+3.1.4) Start omniflixhub
+   ```
+   omniflixhubd unsafe-reset-all 
+   omniflixhubd start 
+   ```
+3.1.5) use CTRL+A+D to detach from screen
+   
+(OR)
+
+### 3.2) Start node as `systemctl` service
+
+3.2.1) Create the service file
+
+```
+sudo tee /etc/systemd/system/omniflixhubd.service > /dev/null <<EOF
+[Unit]
+Description=OmniFlixHub Daemon
+After=network-online.target
+
+[Service]
+User=$USER
+ExecStart=$(which omniflixhubd) start
+Restart=always
+RestartSec=3
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
 ```
 
+- Load service and start
+```
+sudo systemctl daemon-reload
+sudo systemctl enable omniflixhubd
+sudo systemctl start omniflixhubd
+```
+
+- Check status of service
+```
+sudo systemctl status omniflixhubd`
+```
+
+You can use `journalctl` to:
+
+- check logs
+`journalctl -u omniflixhubd` 
+
+- most recent logs
+`journalctl -xeu omniflixhubd`
+
+- logs from previous day
+`journalctl --since "1 day ago" -u omniflixhubd`  
