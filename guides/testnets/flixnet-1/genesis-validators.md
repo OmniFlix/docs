@@ -28,7 +28,7 @@ sudo rm -rf /usr/local/go
 1.2) Install latest/required Go version (installing `go1.16.5`)
 
 ```
-curl https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.16.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf
 ```
 
 1.3) Update env variables to include `go`
@@ -50,13 +50,13 @@ source $HOME/.profile
 go version
 ```
 
-### 2) Install required software packages
+## 2) Install required software packages
 
 ```
 sudo apt-get install git curl build-essential make jq -y
 ```
 
-### 3) Install `omniflixhub`
+## 3) Install `omniflixhub`
 
 ```
 git clone https://github.com/Omniflix/omniflixhub.git
@@ -65,7 +65,7 @@ git checkout v0.1.0
 make install
 ```
 
-### 4) Verify your installation
+## 4) Verify your installation
 ```
 omniflixhubd version --long
 ```
@@ -79,7 +79,7 @@ version: 0.1.0
 commit: 95e2aebaf02406bdcc78f9268380528bd1a25617
 ```
 
-### 5) Initialize Node
+## 5) Initialize Node
 
 ```
 omniflixhubd init <your-node-moniker> --chain-id flixnet-1 
@@ -88,7 +88,7 @@ On running the above command, node will be initialized with default configuratio
 
 NOTE: Backup node and validator keys . You will need to use these keys at a later point in time.
 
-### 6) Create Account keys 
+## 6) Create Account keys 
 
 ```
 omniflixhubd keys add <key-name>
@@ -96,13 +96,13 @@ omniflixhubd keys add <key-name>
 
 NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
 
-### 7) Add Genesis Account
+## 7) Add Genesis Account
 
 ```
 omniflixhubd add-genesis-account <key-name> 50000000uflix
 ```
 
-### 8) Create Your `gentx`
+## 8) Create Your `gentx`
 
 ```
 omniflixhubd gentx <key-name> 50000000uflix \
@@ -124,18 +124,18 @@ Note:
 - Don't change amount value while creating your gentx 
 - Genesis transaction file will be saved in `~/.omniflixhub/config/gentx` folder
 
-### 9) Submit Your GenTx
+## 9) Submit Your gentx
 
-Submit your gentx file to this [OmniFlix/testnets](https://github.com/OmniFlix/testnets) repository in the format of 
+Submit your `gentx` file to the [OmniFlix/testnets](https://github.com/OmniFlix/testnets) in the format of 
 `<validator-moniker>-gentx.json`
 
 NOTE: (Do NOT use space in the file name) 
 
-To submit gentx, follow the below process:
+To submit the gentx file, follow the below process:
  
-   - Fork the [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
-   - Upload your gentx file in `flixnet-1/gentxs` folder
-   - Submit Pull Request to [OmniFlix/testnets](https://github.com/OmniFlix/testnets) with name `ADD <your-moniker> gentx`
+ - Fork the [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
+ - Upload your gentx file in `flixnet-1/gentxs` folder
+ - Submit Pull Request to [OmniFlix/testnets](https://github.com/OmniFlix/testnets) with name `ADD <your-moniker> gentx`
 
 ---
 
@@ -148,45 +148,48 @@ genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.c
 
 # B) Starting the validator
 
-### 1) Download Final Genesis
+## 1) Download Final Genesis
 download genis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
 
 TBU
 
-### 2) Peers & Seeds
+## 2) Peers & Seeds
 
 TBU
 
-### 3) Start the Node
+## 3) Start the Node
 
 ### 3.1) Start node with screen session
-3.1.1) Update no of open files limit
-  ```
-   ulimit -Sn 65535
-   ulimit -Hn 65535
+3.1.1) Update the limit of `number of open files`
+```
+ ulimit -Sn 65535
+ ulimit -Hn 65535
 
-   # verify the values above are updated correctly
-   ulimit -n
-  ```
+ # Verify the values above are updated accurately
+ ulimit -n
+```
 
 3.1.2) Install screen if not installed
-  ```
-   sudo apt-get install screen -y
-  ```
+```
+sudo apt-get install screen -y
+```
+
 3.1.3) Start new screen with a name
-   ```
-   screen -Rd omniflix
-   ```
+ ```
+ screen -Rd omniflix
+ ```
+
 3.1.4) Start omniflixhub
-   ```
-   omniflixhubd unsafe-reset-all 
-   omniflixhubd start 
-   ```
-3.1.5) use CTRL+A+D to detach from screen
+ ```
+ omniflixhubd unsafe-reset-all 
+ omniflixhubd start 
+ ```
+
+3.1.5) Use `CTRL+A+D` to detach the `screen`
    
 (OR)
 
-### 3.2) Start node as `systemctl` service
+#### 3.2) Start node as `systemctl` service
 
 3.2.1) Create the service file
 
@@ -220,13 +223,20 @@ sudo systemctl start omniflixhubd
 sudo systemctl status omniflixhubd
 ```
 
-3.2.4) You can use `journalctl` to:
+`NOTE:`
+A helpful command here is `journalctl` that can be used to:
 
-- check logs
-`journalctl -u omniflixhubd` 
+  a) check logs
+  ```
+  journalctl -u omniflixhubd
+  ```
 
-- most recent logs
-`journalctl -xeu omniflixhubd`
+  b) most recent logs
+  ```
+  journalctl -xeu omniflixhubd
+  ```
 
-- logs from previous day
-`journalctl --since "1 day ago" -u omniflixhubd`  
+  c) logs from previous day
+  ```
+  journalctl --since "1 day ago" -u omniflixhubd
+  ```
