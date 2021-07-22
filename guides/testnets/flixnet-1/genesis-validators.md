@@ -1,7 +1,7 @@
 # Setting Up a Genesis Validator for OmniFlix Testnet (flixnet-1)
 
-Hardware
----
+### Hardware Requirements
+
 - OS : Ubuntu 20.04
   ### minimal
   
@@ -14,7 +14,7 @@ Hardware
   - Storage: 50GB SSD
   
 
-setup
+Setup 
 ---
 ### Install Go
 ```
@@ -66,6 +66,10 @@ commit: 95e2aebaf02406bdcc78f9268380528bd1a25617
 ```
 omniflixhubd init <your-node-moniker> --chain-id flixnet-1 
 ```
+Above command will initialize node with default configuration (config files will be saved at  ~/.omniflixhub/config)
+
+Backup your node and validator keys. you may need these keys in later phases
+
 ### Create Account keys 
 ```
 omniflixhubd keys add <key-name>
@@ -100,7 +104,7 @@ submit your gentx file to this [Omniflix/testnets](https://github.com/Omniflix/t
  To submit gentx
  
    - Fork [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
-   - Upload your gentx file in `flixnet-1/gentxs` folder with file name format as {moniker}-{gentx}.json
+   - Upload your gentx file in `flixnet-1/gentxs` folder with file name format as {moniker}-gentx.json
    - Submit Pull request to [Omniflix/testnets](https://github.com/Omniflix/testnets) with name `ADD <your-moniker> GenTx`
 
 ---

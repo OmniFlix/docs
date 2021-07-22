@@ -1,10 +1,10 @@
 ### Create Validator Post Genesis
 
-1. Create Full Node
+1. Run Full Node
 2. Become Validator
 
-##### Create Full Node
- see run-full-node.md
+##### Run Full Node
+  - Check "Run Full Node" section to Run a Full Node
 
 #### Create Validator
 
