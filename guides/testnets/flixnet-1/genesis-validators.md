@@ -95,10 +95,13 @@ omniflixhubd gentx <key-name> 50000000uflix \
   --identity="<your-keybase-identity>" 
 ```
 `<key-name>` and `chain-id` are required. other flags are optional
+
+Note: Don't change amount value in above command 
+
 genesis tx will be saved in `~/.omniflixhub/config/gentx` folder
 
 ### Submit Your GenTx
-submit your gentx file to this [Omniflix/testnets](https://github.com/Omniflix/testnets) repository in the format `<validator-moniker>-gentx.json` (don\'t use spaces in file names) 
+submit your gentx file to [Omniflix/testnets](https://github.com/Omniflix/testnets) repository in the format `<validator-moniker>-gentx.json` (don\'t use spaces in file names) 
 
 
  To submit gentx
