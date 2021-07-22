@@ -3,9 +3,17 @@
 1. Run Full Node
 2. Become Validator
 
-##### Run Full Node
+#### Run Full Node
   - Check "Run Full Node" section to Run a Full Node
 
+#### Create Account Keys 
+```
+omniflixhubd keys add <key-name>
+```
+
+NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
+#### Get Test tokens from faucet
+ - TBU 
 #### Create Validator
 
 

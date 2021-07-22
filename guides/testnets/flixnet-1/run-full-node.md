@@ -103,9 +103,9 @@ persistnet_peers = ""
 ```
 
 
-### 8) Start Node
- - ##### 8.1) Start node with screen session
-   8.1.1) Update no of open files limit
+# B) Start Node
+ - ### 1) Start node with screen session
+   1.1) Update no of open files limit
    ```
    ulimit -Sn 65535
    ulimit -Hn 65535
@@ -113,25 +113,25 @@ persistnet_peers = ""
    # verify the values above are updated correctly
    ulimit -n
    ```
-   8.1.2) install screen if not installed
+   1.2) install screen if not installed
    ```
     sudo apt-get install screen -y
    ```
-   8.1.3) start new screen with a name
+   1.3) start new screen with a name
    ```
    screen -Rd omniflix
    ```
-   8.1.4) start omniflixhub
+   1.4) start omniflixhub
    ```
    omniflixhubd unsafe-reset-all 
    omniflixhubd start 
    ```
-   8.1.5) use CTRL+A+D to detach from screen
+   1.5) use CTRL+A+D to detach from screen
    
    (OR)
    
- - ##### 8.2) Start node as systemctl service
-   8.2.1) Create service file
+ - ### 2) Start node as systemctl service
+   2.1) Create service file
    ```
    sudo tee /etc/systemd/system/omniflixhubd.service > /dev/null <<EOF  
    [Unit]
@@ -149,18 +149,18 @@ persistnet_peers = ""
    WantedBy=multi-user.target
    EOF
    ```
-   8.2.1) Load service and start
+   2.1) Load service and start
    ```
    sudo systemctl daemon-reload
    sudo systemctl enable omniflixhubd
    sudo systemctl start omniflixhubd 
    ```
 
-   8.2.2) check status of service
+   2.2) check status of service
    ```
    sudo systemctl status omniflixhubd
    ```
-   8.3.3) You can use `journalctl` to:
+   2.3) You can use `journalctl` to:
    - check logs
  `journalctl -u omniflixhubd` 
 
