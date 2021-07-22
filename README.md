@@ -1,1 +1,1 @@
-# docs
+# OmniFlix documentation for various resources.
