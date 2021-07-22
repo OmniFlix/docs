@@ -217,7 +217,7 @@ sudo systemctl start omniflixhubd
 
 - Check status of service
 ```
-sudo systemctl status omniflixhubd`
+sudo systemctl status omniflixhubd
 ```
 
 You can use `journalctl` to:
