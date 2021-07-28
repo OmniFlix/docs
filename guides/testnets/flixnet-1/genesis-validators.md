@@ -149,16 +149,26 @@ genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.c
 # B) Starting the validator
 
 ## 1) Download Final Genesis
-download genis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
+download genesis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
 
-TBU
+```
+curl https://raw.githubusercontent.com/OmniFlix/testnets/main/flixnet-1/genesis.json > ~/.omniflixhub/config/genesis.json
+```
+verify sha256 hash of genesis file
+```
+shasum -a 256 ~/.omniflixhub/config/genesis.json
+``` 
+it should be `ced9186f654d7598125fb23756d14ff0692892322d4ff35eebd467166cb0883e`
 
-## 2) Peers & Seeds
+## 2) Update Peers & Seeds in config.toml
+```
+seeds="af3b140b9283f568aa49097e9e7dba8a9f3498e3@45.72.100.122:26656"
+peers="449848dbf4c9efec273f9014b3e2ff7f2ca468e5@45.72.100.123:26656,086706a33dd2c511bf0162ee3583429a9e2ab1a5@45.72.100.124:26656"
 
-TBU
-
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
+```
 ## 3) Start the Node
-
+Use **3.2** for better approch
 ### 3.1) Start node with screen session
 3.1.1) Update the limit of `number of open files`
 ```
@@ -228,7 +238,7 @@ A helpful command here is `journalctl` that can be used to:
 
   a) check logs
   ```
-  journalctl -u -f omniflixhubd
+  journalctl -u omniflixhubd
   ```
 
   b) most recent logs
