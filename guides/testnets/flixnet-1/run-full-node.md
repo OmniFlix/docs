@@ -88,14 +88,6 @@ On running the above command, node will be initialized with default configuratio
 
 NOTE: Backup node and validator keys . You will need to use these keys at a later point in time.
 
-## 6) Create Account keys 
-
-```
-omniflixhubd keys add <key-name>
-```
-
-NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
-
 ---
 
 **Execute below instructions only after publishing of final genesis file**
