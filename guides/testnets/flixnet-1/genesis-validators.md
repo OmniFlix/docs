@@ -149,16 +149,17 @@ genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.c
 # B) Starting the validator
 
 ## 1) Download Final Genesis
-download genesis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository
+Use `curl` to download the genesis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository.
 
 ```
 curl https://raw.githubusercontent.com/OmniFlix/testnets/main/flixnet-1/genesis.json > ~/.omniflixhub/config/genesis.json
 ```
-verify sha256 hash of genesis file
+Verify sha256 hash of genesis file with the below command
 ```
 shasum -a 256 ~/.omniflixhub/config/genesis.json
 ``` 
-it should be `ced9186f654d7598125fb23756d14ff0692892322d4ff35eebd467166cb0883e`
+The hash should be:
+```ced9186f654d7598125fb23756d14ff0692892322d4ff35eebd467166cb0883e```
 
 ## 2) Update Peers & Seeds in config.toml
 ```
