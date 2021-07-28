@@ -97,7 +97,7 @@ genesis file will be published to [Omniflix/testnets/flixnet-1](https://github.c
 
 
 
-# B) Starting the validator
+# B) Starting Node
 
 ## 1) Download Final Genesis
 Use `curl` to download the genesis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository.
