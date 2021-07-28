@@ -119,6 +119,9 @@ peers="449848dbf4c9efec273f9014b3e2ff7f2ca468e5@45.72.100.123:26656,086706a33dd2
 
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
+
+ [More Flixnet-1 Seeds and Peers List](https://hackmd.io/A0zUpzEFTaq3wwEUD9F5lA)
+
 ## 3) Start the Node
 Use **3.2** for better approch
 ### 3.1) Start node with screen session
