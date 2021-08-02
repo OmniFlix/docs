@@ -1,10 +1,11 @@
 ### Create Validator Post Genesis
 
 1. Run Full Node
-2. Become Validator
+2. Create Validator
+3. Sync blocks
 
-#### Run Full Node
-  - Check "Run Full Node" section to Run a Full Node
+#### 1.Run Full Node
+  - Check "[Run Full Node](https://github.com/OmniFlix/docs/blob/main/guides/testnets/flixnet-1/run-full-node.md)" section to Run a Full Node
 
 #### Create Account Keys 
 ```
@@ -14,7 +15,8 @@ omniflixhubd keys add <key-name>
 NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
 #### Get Test tokens from faucet
  - TBU 
-#### Create Validator
+ 
+#### 2.Create Validator
 
 
 ```
@@ -36,6 +38,8 @@ omniflixhubd tx staking create-validator \
   --from=<key_name>
 ```
 `Note:`  Only execute above transaction after complete sync of your full node
+
+#### 3.Sync blocks
 
 To  check sync status use below instruction
 
