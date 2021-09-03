@@ -89,7 +89,11 @@ On running the above command, node will be initialized with default configuratio
 NOTE: Backup node and validator keys . You will need to use these keys at a later point in time.
 
 ## 6) Create Account keys 
-
+if you have participated in previous testnet and have mnemonic phrase, use below command to recover your account
+```
+omniflixhubd keys add <key-name> --recover
+```
+to create new account
 ```
 omniflixhubd keys add <key-name>
 ```
@@ -108,14 +112,13 @@ omniflixhubd add-genesis-account <key-name> 50000000uflix
 omniflixhubd gentx <key-name> 50000000uflix \
   --pubkey=$(omniflixhubd tendermint show-validator) \
   --chain-id="flixnet-2" \
-  --moniker=<validator-moniker> \
+  --moniker="my-moniker" \
   --website="https://yourweb.site" \
-  --details="description of your validator" \
+  --details="description of my validator" \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
-  --min-self-delegation="1" \
-  --identity="<your-keybase-identity>" 
+  --min-self-delegation="1" 
 ```    
 
 Note:
