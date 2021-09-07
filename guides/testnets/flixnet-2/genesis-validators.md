@@ -61,6 +61,7 @@ sudo apt-get install git curl build-essential make jq -y
 ```
 git clone https://github.com/Omniflix/omniflixhub.git
 cd omniflixhub
+git fetch --all
 git checkout v0.2.1
 make install
 ```
