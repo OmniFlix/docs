@@ -111,7 +111,7 @@ jq -S -c -M '' ~/.omniflixhub/config/genesis.json | shasum -a 256
 ```
 genesis sha256 hash should be 
 ```
-45c2f7e15f12ff2cecc2344a058bc28d207b327879daa5e9ea0c476342da9865
+35211cc2451e5604edf7c907bfea3b5223964160c02c3174cb277718a00e22e7
 ```
 
 ## 2) Update Peers & Seeds in config.toml
