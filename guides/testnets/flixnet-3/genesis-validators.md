@@ -1,4 +1,4 @@
-# Setting up a Genesis Validator for OmniFlix Testnet (flixnet-2)
+# Setting up a Genesis Validator for OmniFlix Testnet (flixnet-3)
 
 Hardware
 ---
