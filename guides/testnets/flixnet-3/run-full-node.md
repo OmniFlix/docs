@@ -60,6 +60,7 @@ git clone https://github.com/Omniflix/omniflixhub.git
 cd omniflixhub
 git fetch --all
 git checkout v0.3.0
+go mod tidy
 make install
 ```
 
