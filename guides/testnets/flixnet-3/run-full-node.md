@@ -25,7 +25,8 @@ curl https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz | sudo tar -C/usr/loca
 ```
 
 1.3) Update env variables to include `go`
-**Not required if you have already done this before**
+    
+   - **Not required if you have already done this before**
 ```
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
@@ -77,7 +78,8 @@ commit: dd593e422d21bbaa91d31b5aebf97bd47d396858
 ```
 
 ### 5) Initialize Node
- **Not required if you have already initialized before**
+ 
+ - **Not required if you have already initialized before**
 
 ```
 omniflixhubd init <your-node-moniker> --chain-id flixnet-3
