@@ -6,7 +6,7 @@ Hardware
 - **Operating System (OS):** Ubuntu 20.04
 - **CPU:** 2 core
 - **RAM:** 4GB
-- **Storage:** 250GB SSD
+- **Storage:** 200GB SSD
 
 # A) Setup
 
@@ -21,11 +21,11 @@ sudo rm -rf /usr/local/go
 1.2) Install latest/required Go version (installing `go1.17`)
 
 ```
-curl https://dl.google.com/go/go1.17.3.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
+curl https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
 ```
 
 1.3) Update env variables to include `go`
-
+**Not required if you have already done this before**
 ```
 cat <<'EOF' >>$HOME/.profile
 export GOROOT=/usr/local/go
@@ -73,7 +73,7 @@ On running the above command, you should see a similar response like this. Make 
 name: OmniFlixHub
 server_name: omniflixhubd
 version: 0.3.0
-commit: <version-commit>
+commit: dd593e422d21bbaa91d31b5aebf97bd47d396858
 ```
 
 ### 5) Initialize Node
@@ -109,16 +109,21 @@ jq -S -c -M '' ~/.omniflixhub/config/genesis.json | shasum -a 256
 ```
 genesis sha256 hash should be 
 ```
-To be updated
+6fdfe39c408d7a52b0b89b4874c2e8635106301214dc77600627d2d5b3a748c1
 ```
 
-## 2) Update Peers & Seeds in config.toml
+## 2) Update Config 
+   - Update Peers & Seeds in config.toml
 
 ```
-seeds=""
-peers=""
+seeds="75a6d3a3b387947e272dab5b4647556e8a3f9fc1@45.72.100.122:26656"
+peers="f05968e78c84fd3997583fabeb3733a4861f53bf@45.72.100.120:26656,28ea934fbe330df2ca8f0ddd7a57a8a68c39a1a2@45.72.100.110:26656,94326ddc5661a1b571ea10c0626f6411f4926230@45.72.100.111:26656"
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
+   - Set minimum-gas-price
+    
+    minimum-gas-prices = "0.001uflix"
+    
 
 ## 3) Start the Node
 

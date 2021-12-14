@@ -9,14 +9,16 @@
   - Check "[Run Full Node](https://github.com/OmniFlix/docs/blob/main/guides/testnets/flixnet-3/run-full-node.md)" section to Run a Full Node
 
 ### 2. Create Account & Get test tokens 
+To restore existing account from mnemonic phrase 
+```
+omniflixhubd keys add <key-name> --recover
+```
+
 To create new account
 ```
 omniflixhubd keys add <key-name>
 ```
-To restore key from mnemonic phrase 
-```
-omniflixhubd keys add <key-name> --recover
-```
+
 NOTE: Save `mnemonic` and related account details (public key). You will need to use the need mnemonic/private key to recover accounts at a later point in time.
 ##### Get Test tokens from faucet
  - TBU 
@@ -24,7 +26,7 @@ NOTE: Save `mnemonic` and related account details (public key). You will need to
 ### 3.Create Validator
  - ##### Check full node sync status
      
-     `omniflixhubd status 2>&1 | jq -r ".SyncInfo"` 
+     `omniflixhubd status  | jq -r ".SyncInfo"` 
 
    `catching_up: false` means node is completely synced
  - ##### Create validator 
@@ -44,6 +46,6 @@ omniflixhubd tx staking create-validator \
   --min-self-delegation="1" \
   --gas="auto" \
   --gas-adjustment="1.2" \
-  --gas-prices="0.025uflix" \
+  --gas-prices="0.001uflix" \
   --from=<key_name>
 ```
