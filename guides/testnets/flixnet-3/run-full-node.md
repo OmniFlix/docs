@@ -123,7 +123,7 @@ seeds="75a6d3a3b387947e272dab5b4647556e8a3f9fc1@45.72.100.122:26656"
 peers="f05968e78c84fd3997583fabeb3733a4861f53bf@45.72.100.120:26656,28ea934fbe330df2ca8f0ddd7a57a8a68c39a1a2@45.72.100.110:26656,94326ddc5661a1b571ea10c0626f6411f4926230@45.72.100.111:26656"
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
-   - Set minimum-gas-price
+   - Set minimum-gas-price in `config/app.toml`
     
     minimum-gas-prices = "0.001uflix"
     
