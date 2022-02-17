@@ -104,7 +104,7 @@ genesis file will be published to [Omniflix/testnets/flixnet-4](https://github.c
 Use `curl` to download the genesis file from [Omniflix/testnets](https://github.com/Omniflix/testnets) repository.
 
 ```
-TBA
+curl https://raw.githubusercontent.com/OmniFlix/testnets/main/flixnet-4/genesis.json > ~/.omniflixhub/config/genesis.json
 ```
 Verify sha256 hash of genesis file with the below command
 ```
@@ -112,14 +112,16 @@ jq -S -c -M '' ~/.omniflixhub/config/genesis.json | shasum -a 256
 ```
 genesis sha256 hash should be 
 ```
-TBA
+725244218a6b76e03d204eb99ebc72e7a27c7a464a6f5bb1f7994062f18b52b2
 ```
 
 ## 2) Update Config 
    - Update Peers & Seeds in config.toml
 
 ```
-TBA
+seeds="835f68f39c287a4961ca68d08429ae926ef5b7b2@34.124.192.114:26656"
+peers="c3135908ab7884b22a59c6b52db002a323d3bffb@34.87.100.205:26656,4df6e709ce8bff6c671a35a659fdda4b2563bc1a@34.124.240.11:26656"
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
    - Set minimum-gas-price
     
