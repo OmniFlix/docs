@@ -1,4 +1,4 @@
-# Setting up a Genesis Validator for OmniFlix Mainnet (omniflixhub-1)
+# Submit GenTx for OmniFlix Mainnet (omniflixhub-1)
 
 Hardware Specification
 ---
@@ -48,7 +48,7 @@ go version
 ## 2) Install required software packages
 
 ```
-sudo apt-get install git curl build-essential make jq -y
+sudo apt-get install git build-essential make jq -y
 ```
 
 ## 3) Install `omniflixhub`
