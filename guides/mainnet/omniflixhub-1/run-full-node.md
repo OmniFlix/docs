@@ -47,7 +47,7 @@ go version
 ### 2) Install required software packages
 
 ```
-sudo apt-get install git curl build-essential make jq -y
+sudo apt-get install git build-essential make jq -y
 ```
 
 ### 3) Install `omniflixhub`
@@ -102,7 +102,7 @@ genesis file will be published to [Omniflix/mainnet/omniflixhub-1](https://githu
 Use `curl` to download the genesis file from [Omniflix/mainnet](https://github.com/Omniflix/mainnet) repository.
 
 ```
-TBA
+curl https://raw.githubusercontent.com/OmniFlix/mainnet/main/omniflixhub-1/genesis.json > ~/.omniflixhub/config/genesis.json
 ```
 Verify sha256 hash of genesis file with the below command
 ```
@@ -110,14 +110,16 @@ jq -S -c -M '' ~/.omniflixhub/config/genesis.json | shasum -a 256
 ```
 genesis sha256 hash should be 
 ```
-TBA
+3c01dd89ae10f3dc247648831ef9e8168afd020946a13055d92a7fe2f50050a0
 ```
 
 ## 2) Update Config 
    - Update Peers & Seeds in config.toml
 
 ```
-TBA
+seeds="9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656"
+peers="2df1f357f08049ba0c0dddfffe805f0e135e54ec@35.247.185.216:26656,6198ac4bc907f6d1a78309ef58491370afc49799@34.124.195.219:26656"
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
    - Set minimum-gas-price
     
