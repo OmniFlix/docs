@@ -2,7 +2,7 @@
 
 Below is a list of IBC channels setup for the OmniFlix Hub.
 
-| source chain-id  | source channel  | destination chain-id  | destinaion channel |
+| source chain-id  | source channel  | destination chain-id  | destination channel |
 | ---------------- | --------------- | --------------------- | ------------------ |
 | omniflixhub-1 | channel-0 | cosmoshub-4 | channel-290 |
 | omniflixhub-1 | channel-1 | osmosis-1 | channel-199 |
