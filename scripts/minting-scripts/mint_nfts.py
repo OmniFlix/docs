@@ -3,7 +3,7 @@ import time
 import shlex
 import subprocess
 
-# Add your collection id here
+# Add your collection id here eg: onftdenom952b646050314191939b886098e62b..
 collection_id = ''
 
 # Add path of your nfts json file                                    
@@ -12,17 +12,19 @@ json_file = ''
 # set delay between transactions                                
 sleep_secs = 5
 
+### Do not edit!
 chain_id = 'omniflixhub-1'  # chain_id of the network
 rpc_node = 'https://rpc.omniflix.network:443'
 fees = '200uflix'  # fees for transaction
-fee_account = 'omniflix1q3jnku877fwn9xe8d7a9vsgs29jld4wkpy3lmg'  # fee payer account address
-
-# change this with your key name
-account_key_name = ''
-
+fee_account = 'omniflix1q3jnku877fwn9xe8d7a9vsgs29jld4wkpy3lmg'  # fee payer/granter account address used for fee allowance.
 broadcast_mode = 'block'  # transaction broadcast mode
-keyring_type = 'test'  # keyring backend type
+### Do not edit!
 
+# keyring backend type. If you are using os keyring, change this value to 'os'
+keyring_type = 'test'  
+
+# change this with your key name from local keyring test/os
+account_key_name = ''
 
 def nft_mint_cmd(collection_id, nft):
     datajstr = ''
