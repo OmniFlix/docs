@@ -8,13 +8,13 @@
 
 - Create
 
-     `omniflixhubd keys add alice --keyring-backend test`
+     `omniflixhubd keys add <alice> --keyring-backend test`
 
 - Restore
 
-     `omniflixhubd keyys add alice --recover --keyring-backend test`
+     `omniflixhubd keyys add <alice> --recover --keyring-backend test`
      
-   `Note: replace alice with your wallet key name`
+   `Note: replace <alice> with your wallet key name`
 
 ### 3. Install python3
 
@@ -30,15 +30,21 @@
      `json_file = '/path/to/file'`
 
 - update account key name
-      account_key_name = 'alice' # change this with your key name
+      `account_key_name = 'alice'` # change this with your key name
 
 - set fees, fee_account 
-      add your feegranter address and fees
-      
-     omniflix feegranter addess 
-     `--fee-account=omniflix1q3jnku877fwn9xe8d7a9vsgs29jld4wkpy3lmg`
+     `Dont Edit these unless you are sure.`
      
-     can use `200uflix` or `500uflix` as fees
+     - fee-account
+
+
+        omniflix feegranter addess 
+        `--fee-account=omniflix1q3jnku877fwn9xe8d7a9vsgs29jld4wkpy3lmg`
+     
+     - fees
+
+
+        can use `200uflix` or `500uflix` as fees
 
 ### 5. Start minting script
 - start a screen session
