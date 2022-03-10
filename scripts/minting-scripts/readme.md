@@ -13,6 +13,8 @@
 - Restore
 
      `omniflixhubd keyys add alice --recover --keyring-backend test`
+     
+   `Note: replace alice with your wallet key name`
 
 ### 3. Install python3
 
