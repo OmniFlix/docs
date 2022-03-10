@@ -1,4 +1,4 @@
-## Follow below steps to mint NFTs
+## Follow below steps to List NFTs on marketplace
 
 ### 1. Install `omniflixhubd` 
 - check below url to install and setup omniflixhubd binary
@@ -21,10 +21,6 @@
    sudo apt-get install python3 && python3-pip
 
 ### 4. Update script variables 
-    
-   - set collection_id
-      update `collection_id` with your colllection id
-     `collection_id = 'onftdenom...'`
       
 - update nfts json file path
      `json_file = '/path/to/file'`
@@ -40,21 +36,21 @@
      
      can use `200uflix` or `500uflix` as fees
 
-### 5. Start minting script
+### 5. Start listing script
 - start a screen session
      
-    `screen -Rd mint-script`
+    `screen -Rd listing-script`
 
 - run script
       
-    `python3 mint_nfts.py`
+    `python3 list_nfts.py`
       
     check logs to know nfts minting or not
  
     use `CNTRL + A + D` to detach from screen  
     you can attach to screen again with below command
      
-     `screen -rd mint-script`
+     `screen -rd listing-script`
 
 
 

@@ -1,0 +1,74 @@
+[
+  {
+    "nft_id": "onft1ab2c3001",
+    "denom_id": "onftdenom1ab2cd3e",
+    "price": {
+      "denom": "uflix",
+      "amount": 100000000
+    },
+    "split_shares": [
+      {
+        "address": "omniflix1x4thmw33u8tx2u37fwtpn96n2sr76glhc7h6fj",
+        "weight": 0.7
+      },
+      {
+        "address": "omniflix13jt29885gkp2upl4n3pfafey4hpj7tr40f3duf",
+        "weight": 0.3
+      }
+    ]
+  },
+   {
+    "nft_id": "onft1ab2c3002",
+    "denom_id": "onftdenom1ab2cd3e",
+    "price": {
+      "denom": "uflix",
+      "amount": 100000000
+    },
+    "split_shares": [
+      {
+        "address": "omniflix1x4thmw33u8tx2u37fwtpn96n2sr76glhc7h6fj",
+        "weight": 0.7
+      },
+      {
+        "address": "omniflix13jt29885gkp2upl4n3pfafey4hpj7tr40f3duf",
+        "weight": 0.3
+      }
+    ]
+  },
+  {
+    "nft_id": "onft1ab2c3003",
+    "denom_id": "onftdenom1ab2cd3e",
+    "price": {
+      "denom": "uflix",
+      "amount": 100000000
+    },
+    "split_shares": [
+      {
+        "address": "omniflix1x4thmw33u8tx2u37fwtpn96n2sr76glhc7h6fj",
+        "weight": 0.7
+      },
+      {
+        "address": "omniflix13jt29885gkp2upl4n3pfafey4hpj7tr40f3duf",
+        "weight": 0.3
+      }
+    ]
+  },
+  {
+    "nft_id": "onft1ab2c3004",
+    "denom_id": "onftdenom1ab2cd3e",
+    "price": {
+      "denom": "uflix",
+      "amount": 100000000
+    },
+    "split_shares": [
+      {
+        "address": "omniflix1x4thmw33u8tx2u37fwtpn96n2sr76glhc7h6fj",
+        "weight": 0.7
+      },
+      {
+        "address": "omniflix13jt29885gkp2upl4n3pfafey4hpj7tr40f3duf",
+        "weight": 0.3
+      }
+    ]
+  }
+]
