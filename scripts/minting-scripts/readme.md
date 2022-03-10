@@ -4,7 +4,7 @@
 - check below url to install and setup omniflixhubd binary
     https://github.com/OmniFlix/docs/blob/main/guides/mainnet/omniflixhub-1/mint-list-nfts.md#2-download--install-omniflix-hub
 
-### 2. Create / Add your wallet 
+### 2. Create / Restore your wallet 
 
 - Create
 
