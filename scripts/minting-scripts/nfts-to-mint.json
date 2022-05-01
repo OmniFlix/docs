@@ -1,0 +1,58 @@
+[
+  {
+    "name": "NFT #1",
+    "media_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "preview_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "description": "This is sample description",
+    "nsfw": false,
+    "data": {
+      "code": "1001",
+      "color": "blue"
+    },
+    "royalty_share": 0.05,
+    "transferable": true,
+    "extensible": true
+  },
+  {
+    "name": "NFT #2",
+    "media_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "preview_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "description": "This is sample description",
+    "nsfw": false,
+    "data": {
+      "code": "1002",
+      "color": "blue"
+    },
+    "royalty_share": 0.05,
+    "transferable": true,
+    "extensible": true
+  },
+  {
+    "name": "NFT #3",
+    "media_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "preview_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "description": "This is sample description",
+    "nsfw": false,
+    "data": {
+      "code": "1003",
+      "color": "blue"
+    },
+    "royalty_share": 0.05,
+    "transferable": true,
+    "extensible": true
+  },
+  {
+    "name": "NFT #4",
+    "media_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "preview_uri": "https://ipfs.omniflix.studio/ipfs/QmYN9zsgA2pe717ibzaXpGBH19kwgQMyhdvh1P1oNcNLaY",
+    "description": "This is sample description",
+    "nsfw": false,
+    "data": {
+      "code": "1004",
+      "color": "blue"
+    },
+    "royalty_share": 0.05,
+    "transferable": true,
+    "extensible": true
+  }
+]
