@@ -4,9 +4,9 @@ Hardware Specification
 #### Recommended
 
 - **Operating System (OS):** Ubuntu 20.04
-- **CPU:** 2 core
-- **RAM:** 8GB
-- **Storage:** 200GB SSD
+- **CPU:** 4 core
+- **RAM:** 16GB
+- **Storage:** 500GB SSD
 
 # A) Setup
 
