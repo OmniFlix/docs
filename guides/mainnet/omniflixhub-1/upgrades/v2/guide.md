@@ -6,7 +6,7 @@ The upgrade is scheduled for block `TBD`, which should be about `TBD`.
 
 go v1.18+
 
-### Manual Method
+### 1. Manual Method
 Wait for Omniflixhub to reach the upgrade height (`TBD`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
@@ -40,7 +40,7 @@ Restart the omniflixhubd service
 sudo systemctl start omniflixhubd.service
 ```
 
-### Cosmovisior Method
+### 2. Cosmovisior Method
 #### Install and setup cosmovisor if you haven't running with cosmovisor
 
   [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/v2-upgrade-instructions/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
