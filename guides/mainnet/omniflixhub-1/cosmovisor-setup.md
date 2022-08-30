@@ -1,6 +1,6 @@
 # Cosmovisor Setup
 
-To install Cosmovisor:
+Install Cosmovisor:
 
 ``` {.sh}
 go install github.com/cosmos/cosmos-sdk/cosmovisor/cmd/cosmovisor@v1.0.0
@@ -36,7 +36,7 @@ cosmovisor/genesis folder.
 cp $GOPATH/bin/omniflixhubd ~/.omniflixhub/cosmovisor/genesis/bin
 ```
 
-Cosmovisor is now ready to be started. We will now set up Cosmovisor for the upgrade
+Cosmovisor is now ready to be started. now set up Cosmovisor for the upgrades
 
 Set these environment variables:
 
