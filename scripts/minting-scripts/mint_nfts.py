@@ -44,6 +44,9 @@ def nft_mint_cmd(collection_id, nft):
         cmd += '--inextensible '
     if 'nsfw' in nft and nft['nsfw']:
         cmd += '--nsfw '
+    if 'recipient' in nft and nft['recipient']:
+        cmd += '--recipient {} '.foramt(nft['recipient'])
+
     cmd += '--chain-id {} --node "{}" --fees {} --fee-account {} --from {} -b {} --keyring-backend {} -o json -y '.format(
         chain_id, rpc_node, fees, fee_account, account_key_name, broadcast_mode, keyring_type)
     return cmd
