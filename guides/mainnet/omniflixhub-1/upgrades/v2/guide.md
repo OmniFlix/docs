@@ -1,6 +1,10 @@
-# `upgrade_1`
+# `Upgrade 1`
 
-The upgrade is scheduled for block `TBD`, which should be about `TBD`.
+Name: upgrade_1
+
+When: The upgrade is scheduled for block `TBD`, which should be about `TBD`.
+
+Details : Check here for detailed change log.
 
 ### Go version
 
