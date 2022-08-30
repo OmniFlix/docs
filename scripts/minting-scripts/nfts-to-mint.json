@@ -25,7 +25,8 @@
     },
     "royalty_share": 0.05,
     "transferable": true,
-    "extensible": true
+    "extensible": true,
+    "recipient": "omniflix1jpudqpydw26r3297dlaj3whecvatyayklk4k9e"
   },
   {
     "name": "NFT #3",
