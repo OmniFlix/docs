@@ -47,7 +47,7 @@ sudo systemctl start omniflixhubd.service
 ### 2. Cosmovisior Method
 #### Install and setup cosmovisor if you haven't running with cosmovisor
 
-  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/main/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
+  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/v2-upgrade-instructions/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
    
 
 #### Build and Copy Binary
