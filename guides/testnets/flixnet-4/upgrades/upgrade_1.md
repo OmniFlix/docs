@@ -2,7 +2,7 @@
 
 Name: upgrade_1
 
-When: The upgrade is scheduled for block `TBD`, which should be about `TBD`.
+When: The upgrade is scheduled for block `3030800`, which should be about 11:15 UTC on 6th September 2022.
 
 Details : Check here for detailed change log.
 
@@ -11,7 +11,7 @@ Details : Check here for detailed change log.
 go v1.18+
 
 ### 1. Manual Method
-Wait for Omniflixhub to reach the upgrade height (`TBD`)
+Wait for Omniflixhub to reach the upgrade height (`3030800`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
 ```
@@ -47,7 +47,7 @@ sudo systemctl start omniflixhubd.service
 ### 2. Cosmovisior Method
 #### Install and setup cosmovisor if you haven't running with cosmovisor
 
-  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/v2-upgrade-instructions/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
+  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/main/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
    
 
 #### Build and Copy Binary
