@@ -21,6 +21,18 @@ Look for a panic message, followed by endless peer logs. Stop the daemon
 sudo systemctl stop omniflixhubd.service
 ```
 
+Install go v1.18
+```
+# Remove previous installation
+sudo rm -rf /usr/local/go
+
+# Install correct Go version
+curl https://dl.google.com/go/go1.18.3.linux-amd64.tar.gz | sudo tar -C /usr/local -zxvf -
+
+# Check version
+go version
+```
+
 Run the following commands:
 
 ```
