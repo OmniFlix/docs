@@ -4,8 +4,10 @@ Name: upgrade_1
 
 When: The upgrade is scheduled for block `3031200`, which should be about 11:30 UTC on 6th September 2022.
 
-Details : Check below link for detailed change log.
- - [v0.4.1 - v0.6.0 change log](https://github.com/OmniFlix/omniflixhub/compare/v0.4.1...v0.6.0)
+Details : 
+ - marketplace v0.3.0 (auctions)
+ - ibc-go v3
+ - minimum validator commission decorator
 
 ### Go version
 
