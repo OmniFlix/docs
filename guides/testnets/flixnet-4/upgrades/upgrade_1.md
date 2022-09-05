@@ -2,7 +2,7 @@
 
 Name: upgrade_1
 
-When: The upgrade is scheduled for block `3031000`, which should be about 11:30 UTC on 6th September 2022.
+When: The upgrade is scheduled for block `3031200`, which should be about 11:30 UTC on 6th September 2022.
 
 Details : Check here for detailed change log.
 
@@ -11,7 +11,7 @@ Details : Check here for detailed change log.
 go v1.18+
 
 ### 1. Manual Method
-Wait for Omniflixhub to reach the upgrade height (`3031000`)
+Wait for Omniflixhub to reach the upgrade height (`3031200`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
 ```
