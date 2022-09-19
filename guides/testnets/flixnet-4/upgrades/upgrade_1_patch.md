@@ -11,6 +11,10 @@ start service with --halt-height flag
 ```
 --halt-height=3236500
 ```
+start node
+```
+sudo systemctl restart omniflixhubd.service
+```
 
 ## change binary after halt hight
 ```
@@ -19,6 +23,13 @@ git fetch --all
 git checkout v0.7.0
 make install
 ```
+
+set halt-height to `0` or remove --halt-hight flag
+
+```
+halt-height = 0
+```
+
 And restart node
 ```
 sudo systemctl restart omniflixhubd.service
@@ -38,6 +49,11 @@ mv build/omniflixhubd $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin
 check version (output should be v0.7.0)
 ```
 cosmovisor version
+```
+Unset halt-height
+
+```
+halt-height = 0
 ```
 
 And restart cosmovisor service
