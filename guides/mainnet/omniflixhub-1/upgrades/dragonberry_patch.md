@@ -8,6 +8,11 @@ Stop node
 ```bash
 sudo systemctl stop omniflixhubd.service
 ```
+Install go v1.18+ 
+
+`to install follow instructions in below link` 
+https://hackmd.io/_CNC1LyESk6Rd3fxacNB0w
+
 Install patched version
 ```bash
 cd omniflixhub
