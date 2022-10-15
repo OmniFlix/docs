@@ -2,7 +2,7 @@
 
 This is a patch for the [Dragonberry Vulnerability](https://forum.cosmos.network/t/ibc-security-advisory-dragonberry/7702).
 
-This is _non consensus breaking_ with respect to v0.4.0 & v0.4.1 Validators can update without needing a co-ordinated chain upgrade via governance.
+This is _non consensus breaking_ with respect to v0.4.0 & v0.4.1 validators who can update without needing a co-ordinated chain upgrade via governance.
 
 Stop node
 ```bash
