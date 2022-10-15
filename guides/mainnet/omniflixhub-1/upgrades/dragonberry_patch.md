@@ -41,7 +41,7 @@ sudo systemctl start omniflixhubd.service
 
 To check, the validator node should start producing blocks like before. You can check the same on an OmniFlix Hub explorer of your choice.
 
-The output for the below command should return `v0.4.2` if everything goes well:
+The output for the below command should include `version : 0.4.2` if everything goes well:
 ```
 curl localhost:26657/abci_info -s
 ```
