@@ -23,7 +23,7 @@ Run the following commands:
 ```
 cd $HOME/omniflixhub
 git fetch --all
-git checkout v0.7.0
+git checkout v0.8.0
 make install
 ```
 Check Version
@@ -34,9 +34,9 @@ output should be
 ```
 name: OmniFlixHub
 server_name: omniflixhubd
-version: 0.7.0
-commit: 51f70f158b0e25bb5ebe5e73bc4c235dd72399f5
-build_tags: netgo,ledger,cosmos-sdk v0.45.6
+version: 0.8.0
+commit: TBD
+build_tags: netgo,ledger,cosmos-sdk v0.45.10
 ```
 Restart the omniflixhubd service
 
@@ -54,16 +54,16 @@ sudo systemctl start omniflixhubd.service
 
 ```bash
 git checkout main && git pull
-git checkout v0.7.0
+git checkout v0.8.0
 make build && make install
 
-# check the version - should be v0.7.0
+# check the version - should be v0.8.0
 $HOME/go/bin/omniflixhubd version --long
 > name: OmniFlixHub
 > server_name: omniflixhubd
-> version: 0.7.0
-> commit: 5ec7d4c09fb9ff625ff942d32fec0db4893feb1d
-> build_tags: netgo,ledger,cosmos-sdk v0.45.6
+> version: 0.8.0
+> commit: TBD
+> build_tags: netgo,ledger,cosmos-sdk v0.45.10
 
 # make a dir if you haven't
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin
