@@ -42,7 +42,7 @@ make install
 ```
 Check Version
 ```
-omniflxihubd version --long
+omniflixhubd version --long
 ```
 output should be
 ```
