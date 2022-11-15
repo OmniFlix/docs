@@ -6,9 +6,14 @@ When: The upgrade is scheduled for block `TBD`, which should be about `TBD`.
 
 Details : Check here for detailed change log.
 
+### Recommended Specifications:
+- 4 Core CPU
+- 16GB or more RAM
+- 500GB SSD 
+
 ### Go version
 
-go v1.18+
+go v1.19+
 
 ### 1. Manual Method
 Wait for Omniflixhub to reach the upgrade height (`TBD`)
@@ -35,8 +40,9 @@ output should be
 name: OmniFlixHub
 server_name: omniflixhubd
 version: 0.8.0
-commit: TBD
+commit: 7974ee279ae0ebfc5a638beb9849a6e38fc5ad71
 build_tags: netgo,ledger,cosmos-sdk v0.45.10
+go: go version go1.19.3 linux/amd64
 ```
 Restart the omniflixhubd service
 
@@ -47,7 +53,7 @@ sudo systemctl start omniflixhubd.service
 ### 2. Cosmovisior Method
 #### Install and setup cosmovisor if you haven't running with cosmovisor
 
-  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/v2-upgrade-instructions/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
+  [cosmovisor-setup.md](https://github.com/OmniFlix/docs/blob/main/guides/mainnet/omniflixhub-1/cosmovisor-setup.md)
    
 
 #### Build and Copy Binary
@@ -62,8 +68,9 @@ $HOME/go/bin/omniflixhubd version --long
 > name: OmniFlixHub
 > server_name: omniflixhubd
 > version: 0.8.0
-> commit: TBD
+> commit: 7974ee279ae0ebfc5a638beb9849a6e38fc5ad71
 > build_tags: netgo,ledger,cosmos-sdk v0.45.10
+> go: go version go1.19.3 linux/amd64
 
 # make a dir if you haven't
 mkdir -p $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin
@@ -71,7 +78,7 @@ mkdir -p $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin
 # if you are using cosmovisor you then need to copy this new binary
 cp /home/<your-user>/go/bin/omniflixhubd $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin
 
-# check new version you are about to run - should be equal to v0.7.0
+# check new version you are about to run - should be equal to v0.8.0
 $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin/omniflixhubd version
 
 ```
