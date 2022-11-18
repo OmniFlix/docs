@@ -2,9 +2,11 @@
 
 Name: **upgrade_1**
 
-When: The upgrade is scheduled for block `TBD`, which should be about `TBD`.
+When: The upgrade is scheduled for block [4160416](https://www.mintscan.io/omniflix/blocks/4160416), which should be about `11:00 UTC on 29th Nov 2022`.
 
-Details : Check here for detailed change log.
+Version: `v0.8.0`
+
+Details : [Check here](https://github.com/OmniFlix/omniflixhub/releases/tag/v0.8.0) for detailed change log.
 
 ### Recommended Specifications:
 - 4 Core CPU
@@ -16,7 +18,7 @@ Details : Check here for detailed change log.
 go v1.19+ (Recommended version v1.19.3 )
 
 ### 1. Manual Method
-Wait for Omniflixhub to reach the upgrade height (`TBD`)
+Wait for Omniflixhub to reach the upgrade height (`4160416`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
 ```
