@@ -1,6 +1,6 @@
 # `Upgrade 1`
 
-Name: upgrade_1
+Name: **upgrade_1**
 
 When: The upgrade is scheduled for block `TBD`, which should be about `TBD`.
 
@@ -13,7 +13,7 @@ Details : Check here for detailed change log.
 
 ### Go version
 
-go v1.19+
+go v1.19+ (Recommended version v1.19.3 )
 
 ### 1. Manual Method
 Wait for Omniflixhub to reach the upgrade height (`TBD`)
@@ -43,6 +43,10 @@ version: 0.8.0
 commit: 7974ee279ae0ebfc5a638beb9849a6e38fc5ad71
 build_tags: netgo,ledger,cosmos-sdk v0.45.10
 go: go version go1.19.3 linux/amd64
+```
+Update `iavl` configuration in `app.toml`
+```
+iavl-disable-fastnode = false
 ```
 Restart the omniflixhubd service
 
@@ -82,3 +86,9 @@ cp /home/<your-user>/go/bin/omniflixhubd $DAEMON_HOME/cosmovisor/upgrades/upgrad
 $DAEMON_HOME/cosmovisor/upgrades/upgrade_1/bin/omniflixhubd version
 
 ```
+
+**NOTE:**
+
+**Make sure that you have compiled binary with go v1.19.3**
+
+**Don't forget to update this `iavl-disable-fastnode = false` in app.toml before restart** 
