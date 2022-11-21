@@ -2,7 +2,7 @@
 
 Name: **upgrade_1**
 
-When: The upgrade is scheduled for block [4160416](https://www.mintscan.io/omniflix/blocks/4160416), which should be about `11:00 UTC on 29th Nov 2022`.
+When: The upgrade is scheduled for block [4175400](https://www.mintscan.io/omniflix/blocks/4175400), which should be about `11:00 UTC on 30th Nov 2022`.
 
 Version: `v0.8.0`
 
@@ -18,7 +18,7 @@ Details : [Check here](https://github.com/OmniFlix/omniflixhub/releases/tag/v0.8
 go v1.19+ (Recommended version v1.19.3 )
 
 ### 1. Manual Method
-Wait for Omniflixhub to reach the upgrade height (`4160416`)
+Wait for Omniflixhub to reach the upgrade height (`4175400`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
 ```
