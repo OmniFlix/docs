@@ -47,7 +47,7 @@
       
     Example:
     ```bash
-    onftd tx onft create <symbol>  
+    omniflixhubd tx onft create <symbol>  
      --name=<name>
      --description=<description>
      --preview-uri=<preview-uri>
