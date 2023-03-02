@@ -183,7 +183,7 @@ NOTE: Save `mnemonic` and related account details (public key). You may need to 
   ```
 
 
-## Transfer NFT to Different Chain
+## Transfer nft to different Chain
 Identify the channel for destination chain 
 [ports/channels table](https://github.com/game-of-nfts/gon-testnets/blob/main/doc/port-channel-table.md)
 
@@ -204,7 +204,7 @@ Execute below command to transfer nft to another chain
  --broadcast-mode=block
 ```
 
-## Query NFT on destination chain
+## Query nft on destination chain
 ```bash
 CLASS_TRACE="nft-transfer/$CHANNEL_ID/$COLLECTION_ID"
 ```
