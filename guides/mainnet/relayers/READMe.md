@@ -11,7 +11,7 @@ Below is a list of IBC channels setup for the OmniFlix Hub.
 | omniflixhub-1 | channel-12 |  Cosmos Hub | cosmoshub-4 | channel-306 | Updated from `ch-0` on OmniFlix and `ch-290` on the Cosmos Hub |
 | omniflixhub-1 | channel-14 | Gravity Bridge | gravity-bridge-3 | channel-51 | Updated from `ch-3` on OmniFlix and `ch-35` on the Gravity Bridge |
 | omniflixhub-1 | channel-15 | Sifchain | sifchain-1 | channel-49 | Updated from `ch-6` on OmniFlix and `ch-44` on the Sifchain |
-| omniflixhub-1 | channel-16 |  Akash Net | akashnet-2 | channel-42 | Updated from `ch-7` on OmniFlix and `ch-39` on the Akash Network |
+| omniflixhub-1 | channel-25 |  Akash Net | akashnet-2 | channel-61 | Updated from `ch-7` on OmniFlix and `ch-39` on the Akash Network, updated from `ch-16` on OmniFlix and `ch-42` on Akash Net|
 | omniflixhub-1 | channel-17 |  Ki Chain | kichain-2 | channel-13 | Updated from `ch-9` on OmniFlix and `ch-10` on the Ki Chain |
 | omniflixhub-1 | channel-18 |  Sentinel Hub | sentinelhub-2 | channel-54 | Updated from `ch-10` on OmniFlix and `ch-53` on the Sentinel Hub |
 | omniflixhub-1 | channel-19 |  Crypto.org / Cronos | crypto-org-chain-mainnet-1 | channel-55 | Updated from `ch-11` on OmniFlix and `ch-54` on the the Crypto.com chain |
