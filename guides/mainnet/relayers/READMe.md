@@ -17,6 +17,7 @@ Below is a list of IBC channels setup for the OmniFlix Hub.
 | omniflixhub-1 | channel-19 |  Crypto.org / Cronos | crypto-org-chain-mainnet-1 | channel-55 | Updated from `ch-11` on OmniFlix and `ch-54` on the the Crypto.com chain |
 | omniflixhub-1 | channel-20 | Juno Network | juno-1 | channel-78 | Updated from `ch-13` on OmniFlix and `ch-74` on the Juno Network. Before these, the channels were `ch-2` on OmniFlix and `ch-63` on the Juno Network |
 | omniflixhub-1 | channel-27 | Axelar | axelar-dojo-1 | channel-77 | New Channel |
+| omniflixhub-1 | channel-29 | Agoric | agoric-3 | channel-54 | New Channel |
 
 ## Credits
 The above table, as of 9-Apr-2022, is an extract from the Hermes setup guide for OmniFlix Hub by [@clemensgg](https://github.com/clemensgg/RELAYER-dev-crew/blob/main/HERMES/omniflix/relayer-doc.md) and will be updated going forward. [Notional DAO](https://twitter.com/@notionaldao) and [Crypto Crew Validators](https://twitter.com/crypto_crew) have been highly instrumental in setting up the entire Relayer and IBC infrastructure around OmniFlix along with the feegrant module that piqued interest from around the ecosystem.
