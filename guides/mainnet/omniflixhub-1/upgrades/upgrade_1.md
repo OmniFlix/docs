@@ -47,7 +47,11 @@ build_tags: netgo,ledger,cosmos-sdk v0.45.10
 go: go version go1.19.3 linux/amd64
 ```
 Update `iavl` configuration in `app.toml`
+### It is very important that you VERIFY and ADD THESE LINES RIGHT BEFORE THE TELEMETRY PART
+
 ```
+# IAVLDisableFastNode enables or disables the fast node feature of IAVL.
+# Default is true.
 iavl-disable-fastnode = false
 ```
 Restart the omniflixhubd service
