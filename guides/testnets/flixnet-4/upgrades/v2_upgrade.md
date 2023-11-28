@@ -8,7 +8,8 @@
 - cosmos-sdk v0.47.5
 - cometbft v0.37.2
 - ibc-go v7.3.1
-- streampay v2.2.0
+- nft-transfer v1.1.3-ibc-v7.3.0
+- streampay v2.2.0-alpha.2
 
 **Migrations**:
 - x/params module migration: all modules params will be stored on it's own store instead of params subspace
