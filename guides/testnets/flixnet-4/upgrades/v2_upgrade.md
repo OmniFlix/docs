@@ -2,7 +2,7 @@
 
 **Name**: `v2`
 
-**When**: The upgrade is scheduled for block `TBD`.
+**When**: The upgrade is scheduled for block [9929200](https://testnet.ping.pub/omniflix/block/9929200). (approximately 14:00 UTC, Dec 6th 2023)
 
 **Details** :
 - cosmos-sdk v0.47.5
@@ -77,7 +77,7 @@ Run the following commands:
 ```
 cd $HOME/omniflixhub
 git fetch --all
-git checkout v2.0.0-alpha.2
+git checkout v2.0.0-beta.1
 make install
 ```
 Check Version
@@ -86,12 +86,12 @@ omniflixhubd version --long
 ```
 output should be
 ```
+commit: a0406fca291f41bb3f4ca4b89df1f2eccb5aaaab
+cosmos_sdk_version: v0.47.5
+go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: 2.0.0-alpha.2
-commit: `TBA`
-build_tags: netgo,ledger,cosmos-sdk v0.47.5
-go: go version go1.21.3 linux/amd64
+version: v2.0.0-beta.1
 ```
 Restart the omniflixhubd service
 
@@ -109,17 +109,17 @@ sudo systemctl start omniflixhubd.service
 
 ```bash
 git checkout main && git pull
-git checkout v2.0.0-alpha.2
+git checkout v2.0.0-beta.1
 make build && make install
 
-# check the version - should be v2.0.0-alpha.2
+# check the version - should be v2.0.0-beta.1
 $HOME/go/bin/omniflixhubd version --long
+commit: a0406fca291f41bb3f4ca4b89df1f2eccb5aaaab
+cosmos_sdk_version: v0.47.5
+go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: 2.0.0-alpha.2
-commit: `TBA`
-build_tags: netgo,ledger,cosmos-sdk v0.47.5
-go: go version go1.21.3 linux/amd64
+version: v2.0.0-beta.1
 
 # make a dir if you haven't
 mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
@@ -127,5 +127,5 @@ mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
 # if you are using cosmovisor you then need to copy this new binary
 cp $HOME/go/bin/omniflixhubd $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
 
-# check new version you are about to run - should be equal to v2.0.0-alpha.2
+# check new version you are about to run - should be equal to v2.0.0-beta.1
 $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin/omniflixhubd version
