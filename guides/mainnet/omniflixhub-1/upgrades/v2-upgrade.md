@@ -2,7 +2,7 @@
 
 **Name**: `v2`
 
-**When**: The upgrade is scheduled for block [TBD](https://mintscan.io/omniflix/block/TBD). (approximately -)
+**When**: The upgrade is scheduled for block [10428200](https://mintscan.io/omniflix/block/10428200). (approximately at - JAN 23rd 2024 14:00 UTC)
 
 **Details** :
 - cosmos-sdk v0.47.5
@@ -25,7 +25,7 @@
 
 ### Hardware Requirements
 - CPU: 8 core CPU
-- RAM: **recommended** 64GB, if not possible minimum required 32GB Direct RAM + 32GB can be added as SWAP memory
+- RAM: **recommended** **64GB**, if not possible, have minimum of 32GB RAM + 32GB can be added as SWAP memory
 
 Short version swap setup instructions:
 
@@ -47,13 +47,16 @@ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 In depth swap setup instructions:
 <https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-20-04>
 
+Note: `v2 migration will require more RAM + CPU than normal upgrades, the more cpus and ram will result in faster and smooth upgrade`
+
 Note: `after successful upgrade you can change back to previous hardware specification`
+
 ### Go version
 
 go v1.21.3+
 
 ### 1. Manual Method
-Wait for Omniflixhub to reach the upgrade height (`TBA`)
+Wait for Omniflixhub to reach the upgrade height (`10428200`)
 
 Look for a panic message, followed by endless peer logs. Stop the daemon
 ```
@@ -77,7 +80,7 @@ Run the following commands:
 ```
 cd $HOME/omniflixhub
 git fetch --all
-git checkout `TBA`
+git checkout v2.0.0
 make install
 ```
 Check Version
@@ -86,12 +89,12 @@ omniflixhubd version --long
 ```
 output should be
 ```
-commit: `TBA`
+commit: b7af403b633a01f6d644b12aae2132777449a973
 cosmos_sdk_version: v0.47.5
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: TBA
+version: v2.0.0
 ```
 Restart the omniflixhubd service
 
@@ -109,17 +112,17 @@ sudo systemctl start omniflixhubd.service
 
 ```bash
 git checkout main && git pull
-git checkout TBA
+git checkout v2.0.0
 make build && make install
 
-# check the version - should be TBA
+# check the version - should be v2.0.0
 $HOME/go/bin/omniflixhubd version --long
-commit: TBA
+commit: b7af403b633a01f6d644b12aae2132777449a973
 cosmos_sdk_version: v0.47.5
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: TBA
+version: v2.0.0
 
 # make a dir if you haven't
 mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
@@ -127,5 +130,5 @@ mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
 # if you are using cosmovisor you then need to copy this new binary
 cp $HOME/go/bin/omniflixhubd $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin
 
-# check new version you are about to run - should be equal to TBA
+# check new version you are about to run - should be equal to v2.0.0
 $HOME/.omniflixhub/cosmovisor/upgrades/v2/bin/omniflixhubd version
