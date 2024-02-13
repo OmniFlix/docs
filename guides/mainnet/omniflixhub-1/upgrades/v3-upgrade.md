@@ -60,7 +60,7 @@ omniflixhubd version --long
 ```
 output should be
 ```
-commit: `TBU`
+commit: 6fdfce1df2cda8db3f1bab817dc52b3974ab9e95
 cosmos_sdk_version: v0.47.8
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
@@ -86,9 +86,9 @@ git checkout main && git pull
 git checkout v3.0.0
 make build && make install
 
-# check the version - should be v2.1.0
+# check the version - should be v3.0.0
 $HOME/go/bin/omniflixhubd version --long
-commit: `TBU`
+commit: 6fdfce1df2cda8db3f1bab817dc52b3974ab9e95
 cosmos_sdk_version: v0.47.8
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
