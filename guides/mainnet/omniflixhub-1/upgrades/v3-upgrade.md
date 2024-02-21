@@ -6,9 +6,9 @@
 
 **Details** :
 - version updates
-  - cosmos-sdk v0.47.8
+  - cosmos-sdk v0.47.9
   - cometbft v0.37.4
-  - streampay v2.4.0
+  - streampay v2.4.1
 
 - New Modules
   - cosmwasm (wasmvm 1.5.2)
@@ -51,7 +51,7 @@ Run the following commands:
 ```
 cd $HOME/omniflixhub
 git fetch --all
-git checkout v3.0.0
+git checkout v3.1.0
 make install
 ```
 Check Version
@@ -60,12 +60,12 @@ omniflixhubd version --long
 ```
 output should be
 ```
-commit: 6fdfce1df2cda8db3f1bab817dc52b3974ab9e95
-cosmos_sdk_version: v0.47.8
+commit: e5802bdc912160eb2d9f778912f5dcb3199fb6d1
+cosmos_sdk_version: v0.47.9
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: v3.0.0
+version: v3.1.0
 ```
 Restart the omniflixhubd service
 
@@ -83,17 +83,17 @@ sudo systemctl start omniflixhubd.service
 
 ```bash
 git checkout main && git pull
-git checkout v3.0.0
+git checkout v3.1.0
 make build && make install
 
-# check the version - should be v3.0.0
+# check the version - should be v3.1.0
 $HOME/go/bin/omniflixhubd version --long
-commit: 6fdfce1df2cda8db3f1bab817dc52b3974ab9e95
-cosmos_sdk_version: v0.47.8
+commit: e5802bdc912160eb2d9f778912f5dcb3199fb6d1
+cosmos_sdk_version: v0.47.9
 go: go version go1.21.3 linux/amd64
 name: OmniFlixHub
 server_name: omniflixhubd
-version: v3.0.0
+version: v3.1.0
 
 # make a dir if you haven't
 mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v3/bin
@@ -101,5 +101,5 @@ mkdir -p $HOME/.omniflixhub/cosmovisor/upgrades/v3/bin
 # if you are using cosmovisor you then need to copy this new binary
 cp $HOME/go/bin/omniflixhubd $HOME/.omniflixhub/cosmovisor/upgrades/v3/bin
 
-# check new version you are about to run - should be equal to v3.0.0
+# check new version you are about to run - should be equal to v3.1.0
 $HOME/.omniflixhub/cosmovisor/upgrades/v3/bin/omniflixhubd version
