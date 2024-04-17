@@ -1,4 +1,4 @@
-# `Testnet v3 Upgrade `
+# `Testnet v4 Upgrade `
 
 **Name**: `v4`
 
