@@ -7,12 +7,8 @@
 **Details** :
 - **version updates**
   - cosmos-sdk v0.47.10
-  - cometbft v0.37.4
-  - streampay v2.4.1
-
 - **New Modules**
   - ibc-hooks (v7)
-
 - **Fixes & Improvements**
    - ibc-go patch (v7.4.0)
    - Channel creation from cosmwasm contracts
