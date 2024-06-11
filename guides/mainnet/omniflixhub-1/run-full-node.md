@@ -3,42 +3,26 @@ Hardware Specification
 ---
 #### Recommended
 
-- **Operating System (OS):** Ubuntu 20.04
-- **CPU:** 4 core
-- **RAM:** 16GB
-- **Storage:** 500GB SSD
+- **Operating System (OS):** Ubuntu 22.04
+- **CPU:** 8 core
+- **RAM:** 32GB
+- **Storage:** 1TB SSD
 
 # A) Setup
 
 ## 1) Install Golang (go)
 
-1.1) Remove any existing installation of `go`
+
+1.1) Install latest/required Go version (installing `go1.21.3+`)
 
 ```
 sudo rm -rf /usr/local/go
+wget -q -O - https://git.io/vQhTU | bash -s -- --remove
+wget -q -O - https://git.io/vQhTU | bash -s -- --version 1.21.3
+source $HOME/.bashrc
 ```
 
-1.2) Install latest/required Go version (installing `go1.17`)
-
-```
-curl https://dl.google.com/go/go1.17.5.linux-amd64.tar.gz | sudo tar -C/usr/local -zxvf -
-```
-
-1.3) Update env variables to include `go`
-    
-   - **Not required if you have already done this before**
-```
-cat <<'EOF' >>$HOME/.profile
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export GO111MODULE=on
-export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
-EOF
-
-source $HOME/.profile
-```
-
-1.4) Check the version of go installed
+1.2) Check the version of go installed
 
 ```
 go version
@@ -59,7 +43,7 @@ git clone https://github.com/Omniflix/omniflixhub.git
 # install latest version 
 cd omniflixhub
 git fetch --all
-git checkout v0.4.0
+git checkout v4.1.1
 go mod tidy
 make install
 ```
@@ -74,8 +58,8 @@ On running the above command, you should see a similar response like this. Make 
 ```
 name: OmniFlixHub
 server_name: omniflixhubd
-version: 0.4.0
-commit: 43e65a64a878b2efa0a51ed29aa8e631f4b5b8bc
+version: 4.1.1
+commit: 83f984cd55bb42b3001c5c741614b03aa6d8b6bc
 ```
 
 ### 5) Initialize Node
@@ -88,12 +72,6 @@ omniflixhubd init <your-node-moniker> --chain-id omniflixhub-1
 
 
 ---
-
-**Execute below instructions only after publishing of final genesis file**
-
-genesis file will be published to [Omniflix/mainnet/omniflixhub-1](https://github.com/Omniflix/mainnet)
-
-
 
 
 # B) Starting Node
@@ -117,11 +95,14 @@ genesis sha256 hash should be
    - Update Peers & Seeds in config.toml
 
 ```
-seeds="9d75a06ebd3732a041df459849c21b87b2c55cde@35.187.240.195:26656,19feae28207474eb9f168fff9720fd4d418df1ed@35.240.196.102:26656"
-peers="2df1f357f08049ba0c0dddfffe805f0e135e54ec@35.198.220.79:26656,6198ac4bc907f6d1a78309ef58491370afc49799@34.124.195.219:26656,574b37cc6e80663e70673cbe848147c2643ca48e@35.240.187.174:26656,8313c9d55006da030588f61806b3e056a113e6e8@34.87.18.204:26656"
+seeds="ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:16956"
+peers="4ef7c84feb3aa9135e75aab3b41ea76fd300d63a@136.243.4.177:26656,7c9041b9cd72ec78d8333e15c43bb78ce9f5b96f@88.198.230.27:26656"
 sed -i.bak -e "s/^seeds *=.*/seeds = \"$seeds\"/; s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" ~/.omniflixhub/config/config.toml
 ```
-   - Set minimum-gas-price
+Additionally you can download addrbook file from here
+[https://polkachu.com/addrbooks/omniflix](https://polkachu.com/addrbooks/omniflix)
+
+   - Set minimum-gas-price in app.toml
     
     minimum-gas-prices = "0.001uflix"
     
