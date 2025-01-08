@@ -43,7 +43,7 @@ git clone https://github.com/Omniflix/omniflixhub.git
 # install latest version 
 cd omniflixhub
 git fetch --all
-git checkout v4.1.1
+git checkout v5.0.2
 go mod tidy
 make install
 ```
@@ -58,8 +58,8 @@ On running the above command, you should see a similar response like this. Make 
 ```
 name: OmniFlixHub
 server_name: omniflixhubd
-version: 4.1.1
-commit: 83f984cd55bb42b3001c5c741614b03aa6d8b6bc
+version: v5.0.2
+commit: 62242cceda08e852809b0caf6004381f2f08db2d
 ```
 
 ### 5) Initialize Node
@@ -105,13 +105,22 @@ Additionally you can download addrbook file from here
    - Set minimum-gas-price in app.toml
     
     minimum-gas-prices = "0.001uflix"
-    
 
-## 3) Start the Node
+## 3) Download Snapshot 
+### Snapshots
+ - [c29r3/cosmos-snapshots](https://github.com/c29r3/cosmos-snapshots) repository for omniflixhub snapshots
+ - [polkachu snapshot](https://polkachu.com/tendermint_snapshots/omniflix) 
+ - [NodeStake snapshot](https://nodestake.top/omniflix)
 
-#### 3.1) Start node as `systemctl` service
+or use state-sync 
+ - https://ping.pub/omniflixhub/statesync
+ - https://polkachu.com/state_sync/omniflix    
 
-3.1.1) Create the service file
+## 4) Start the Node
+
+#### 4.1) Start node as `systemctl` service
+
+4.1.1) Create the service file
 
 ```
 sudo tee /etc/systemd/system/omniflixhubd.service > /dev/null <<EOF
@@ -131,14 +140,14 @@ WantedBy=multi-user.target
 EOF
 ```
 
-3.1.2) Load service and start
+4.1.2) Load service and start
 ```
 sudo systemctl daemon-reload
 sudo systemctl enable omniflixhubd
 sudo systemctl start omniflixhubd
 ```
 
-3.1.3) Check status of service
+4.1.3) Check status of service
 ```
 sudo systemctl status omniflixhubd
 ```
